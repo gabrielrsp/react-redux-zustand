@@ -12,6 +12,10 @@ export function Video () {
     dispatch(next())
   }
 
+  if (!currentLesson) {
+    return null
+  }
+
   return (
     <div className="flex-1">
       <div className="w-full bg-zinc-950 aspect-video">

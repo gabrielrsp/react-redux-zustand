@@ -14,7 +14,7 @@ export function Lesson ({ title, duration, onPlay, isCurrent = false }: LessonPr
       onClick={onPlay}
       data-active={isCurrent}
       disabled={isCurrent}
-      className='data-[active=true]:text-emerald-400 flex items-center gap-3 text-sm text-zinc-400 enabled:hover:text-zinc-100'
+      className='flex items-center gap-3 text-sm text-zinc-400 data-[active=true]:text-emerald-400 enabled:hover:text-zinc-100'
     >
       {
         isCurrent ? (

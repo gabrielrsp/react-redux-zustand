@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { useSelector, TypedUseSelectorHook } from 'react-redux'
+import { useSelector, TypedUseSelectorHook, useDispatch } from 'react-redux'
 import { player } from './slices/player'
 
 //ao dar um console.log na action temos a seguinte estrutura:
@@ -16,4 +16,7 @@ export const store = configureStore({
 
 
 export type RootState = ReturnType<typeof store.getState>
+export type AppDispath = typeof store.dispatch
+
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
+export const useAppDispatch: () => AppDispath = useDispatch

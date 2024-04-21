@@ -1,7 +1,7 @@
 import { create } from "zustand"
 import { api } from "../lib/axios"
 
-// test 
+// commit test with email set
 interface Course {
   id: number
   modules: Array<{
